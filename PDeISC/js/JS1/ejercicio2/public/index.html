@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Registro de Personas</title>
+  <link rel="stylesheet" href="ejercicio2.css" />
+</head>
+<body>
+  <h1>Formulario de Registro</h1>
+
+  <form id="registroForm">
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required />
+    <input type="number" id="edad" name="edad" placeholder="Edad" required min="0" max="120" />
+    <input type="date" id="nacimiento" name="nacimiento" required />
+    
+    <select id="sexo" name="sexo" required>
+      <option value="">Sexo</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+    </select>
+
+    <input type="text" id="documento" name="documento" placeholder="Documento" required />
+    <input type="text" id="estado" name="estado" placeholder="Estado Civil" required />
+    <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Nacionalidad" required />
+    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required />
+    <input type="email" id="email" name="email" placeholder="Email" required />
+    <input type="number" id="hijos" name="hijos" min="0" placeholder="Si tiene hijos, ¿Cuantos?" />
+
+    <div>
+      <select id="localidad" name="localidad" required>
+        <option value="">Localidad</option>
+        <option value="Mar del Plata">Mar del Plata</option>
+        <option value="Miramar">Miramar</option>
+        <option value="Balcarce">Balcarce</option>
+        <option value="Bahía Blanca">Bahía Blanca</option>
+        <option value="La Plata">La Plata</option>
+        <option value="CABA">CABA</option>
+      </select>
+    </div>
+    
+    <div>
+      <select id="ocupacion" name="ocupacion" required>
+        <option value="">Ocupación</option>
+        <option value="Trabaja">Trabaja</option>
+        <option value="Estudia">Estudia</option>
+        <option value="Jubilado">Jubilado</option>
+      </select>
+    </div>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+  <div id="msgExito" style="display:none; color:green; margin-top:10px;">¡Registro guardado exitosamente!</div>
+  <div id="msgError" style="display:none; color:red; margin-top:10px;">Error al guardar. Intenta nuevamente.</div>
+
+  <h2>Personas registradas:</h2>
+  <ul id="lista"></ul>
+
+  <script src="ejercicio2.js"></script>
+</body>
+</html>

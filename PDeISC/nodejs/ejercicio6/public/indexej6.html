@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+  <style>
+    form, #resultado {
+      margin: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registro de Usuario</h1>
+
+  <form id="registroForm">
+    <label>Nombre:
+      <input type="text" name="nombre" required>
+    </label>
+
+    <label>Edad:
+      <input type="number" name="edad" required>
+    </label>
+
+    <label>Email:
+      <input type="email" name="email" required>
+    </label>
+
+    <label>Género:
+      <input type="radio" name="genero" value="Masculino"> Masculino
+      <input type="radio" name="genero" value="Femenino"> Femenino
+    </label>
+
+    <label>Intereses:
+      <input type="checkbox" name="intereses" value="Música"> Música
+      <input type="checkbox" name="intereses" value="Deportes"> Deportes
+      <input type="checkbox" name="intereses" value="Cine"> Cine
+    </label>
+
+    <label>País:
+      <select name="pais">
+        <option value="Argentina">Argentina</option>
+        <option value="México">México</option>
+        <option value="España">España</option>
+      </select>
+    </label>
+
+    <br><br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('registroForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      const nombre = formData.get('nombre');
+      const edad = formData.get('edad');
+      const email = formData.get('email');
+      const genero = formData.get('genero');
+      const pais = formData.get('pais');
+      const intereses = formData.getAll('intereses').join(', ');
+
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.innerHTML = `
+        <h2>Datos Registrados:</h2>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Edad:</strong> ${edad}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Género:</strong> ${genero}</p>
+        <p><strong>País:</strong> ${pais}</p>
+        <p><strong>Intereses:</strong> ${intereses || 'Ninguno'}</p>
+      `;
+    });
+  </script>
+</body>
+</html>

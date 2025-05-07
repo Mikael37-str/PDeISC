@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modificar Atributos de Nodos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #contenedor a {
+      display: block;
+      margin: 5px 0;
+    }
+    #log {
+      margin-top: 20px;
+      background: #f0f0f0;
+      padding: 10px;
+      border-left: 3px solid green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Gestión de Nodos &lt;a&gt;</h1>
+  
+  <button id="crear">Crear enlaces</button>
+  <button id="modificar">Modificar href</button>
+
+  <div id="contenedor"></div>
+
+  <div id="log">
+    <h2>Cambios realizados:</h2>
+    <ul id="cambios"></ul>
+  </div>
+
+  <script>
+    const enlacesData = [
+      { texto: 'Google', href: 'https://www.google.com' },
+      { texto: 'YouTube', href: 'https://www.youtube.com' },
+      { texto: 'Wikipedia', href: 'https://www.wikipedia.org' },
+      { texto: 'Mozilla', href: 'https://www.mozilla.org' },
+      { texto: 'OpenAI', href: 'https://www.openai.com' }
+    ];
+
+    const nuevosHref = [
+      'https://duckduckgo.com',
+      'https://vimeo.com',
+      'https://es.wiktionary.org',
+      'https://developer.mozilla.org',
+      'https://chat.openai.com'
+    ];
+
+    document.getElementById('crear').addEventListener('click', () => {
+      const contenedor = document.getElementById('contenedor');
+      contenedor.innerHTML = ''; // Limpiar
+      enlacesData.forEach((item, i) => {
+        const enlace = document.createElement('a');
+        enlace.href = item.href;
+        enlace.textContent = item.texto;
+        enlace.setAttribute('data-index', i); // guardar índice
+        contenedor.appendChild(enlace);
+      });
+      document.getElementById('cambios').innerHTML = ''; // Limpiar log
+    });
+
+    document.getElementById('modificar').addEventListener('click', () => {
+      const enlaces = document.querySelectorAll('#contenedor a');
+      enlaces.forEach((enlace, i) => {
+        const viejo = enlace.href;
+        enlace.href = nuevosHref[i];
+        const li = document.createElement('li');
+        li.textContent = `Enlace "${enlace.textContent}": href cambiado de "${viejo}" a "${enlace.href}"`;
+        document.getElementById('cambios').appendChild(li);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body:not(#p3, #p4, #p5) {
+    overflow-x:hidden;
+    background: url("https://www.shutterstock.com/shutterstock/videos/12800006/thumb/1.jpg?ip=x480")no-repeat center center / cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 2vw;
+    padding: 2vw;
+    background: none;
+    color: white;
+}
+
+.paginas {
+  background: url("https://img.freepik.com/vector-gratis/fondo-nubes-algodon-azucar-acuarela_23-2149237268.jpg")no-repeat center center / cover;
+
+}
+
+.paginas h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  background: none;
+  color: black;
+}
+
+.paginas body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+#p1 video {
+  display: block;
+  margin: 0 auto;
+  height: 20vw; 
+  width: 40%;
+  border: 3px solid #333;
+  border-radius: 10px;
+}
+
+#p1 #imagen {
+  display: none;
+  margin: 0 auto;
+  margin-top: 2vw;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+#p2 #txt{
+  text-align:center; font-size:1.5rem; margin-top:20px;
+}
+
+#p3 {
+  background-color: white;
+}
+
+#p3 h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  background: none;
+  color: black;
+}
+
+#p4 h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  background: none;
+  color: black;
+}
+
+#zona {
+  background: green;
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+#p5 p{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  background: none;
+  color: black;
+}

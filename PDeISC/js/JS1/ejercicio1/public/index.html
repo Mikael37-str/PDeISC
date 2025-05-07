@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Personas</title>
+  <link rel="stylesheet" href="ejercicio1.css">
+</head>
+<body>
+  <h1>Regístrese aquí:</h1>
+  <form id="registroForm">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+    </div>
+    <div>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="pais">País:</label>
+      <select id="pais" name="pais">
+        <option value="">Seleccione</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="España">España</option>
+        <option value="Chile">Chile</option>
+      </select>
+    </div>
+    <button type="submit">Registrar</button>
+  </form>
+
+  <div id="msgExito" style="display:none; color:green; margin-top:15px;">
+    ¡Registro exitoso!
+  </div>
+<br>
+  <h2>Personas registradas:</h2>
+  <ul id="lista"></ul>
+
+  <script src="ejercicio1.js"></script>
+</body>
+</html>

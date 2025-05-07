@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar y Eliminar Elementos</title>
+  <style>
+    #contenedor {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px dashed #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Agregar Elementos con InnerHTML</h1>
+
+  <button onclick="agregarElemento('p')">Agregar párrafo</button>
+  <button onclick="agregarElemento('img')">Agregar imagen</button>
+  <button onclick="agregarElemento('ul')">Agregar lista</button>
+  <button onclick="agregarElemento('button')">Agregar botón</button>
+  <button onclick="agregarElemento('h2')">Agregar título</button>
+
+  <div id="contenedor"></div>
+
+  <script>
+    let contador = 0;
+
+    function agregarElemento(tipo) {
+      const contenedor = document.getElementById('contenedor');
+      const id = `item-${contador++}`;
+
+      let contenido = '';
+      switch (tipo) {
+        case 'p':
+          contenido = '<p>Este es un nuevo párrafo.</p>';
+          break;
+        case 'img':
+          contenido = '<img src="https://placekitten.com/200/200" alt="gatito">';
+          break;
+        case 'ul':
+          contenido = '<ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul>';
+          break;
+        case 'button':
+          contenido = '<button onclick="alert(\'¡Hola!\')">Botón dinámico</button>';
+          break;
+        case 'h2':
+          contenido = '<h2>Este es un título agregado</h2>';
+          break;
+      }
+
+      contenedor.innerHTML += `
+        <div class="item" id="${id}">
+          ${contenido}
+          <br>
+          <button onclick="eliminarElemento('${id}')">Eliminar</button>
+        </div>
+      `;
+    }
+
+    function eliminarElemento(id) {
+      const elemento = document.getElementById(id);
+      if (elemento) {
+        elemento.remove();
+      }
+    }
+  </script>
+</body>
+</html>
