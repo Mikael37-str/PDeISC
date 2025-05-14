@@ -1,0 +1,11 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desde TXT</title>
+</head>
+<body>
+    <h1>Contenido.txt</h1>
+    <p>El archivo de texto ya fue creado, este es su contenido.</p>
+</body>
+</html>
