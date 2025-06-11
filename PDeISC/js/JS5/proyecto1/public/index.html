@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador TXT de Números</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Generador de Archivo TXT de Números</h1>
+
+        <div class="card">
+            <h2>Ingresa tus Números</h2>
+            <p>Introduce entre 10 y 20 números. ¡Uno por uno!</p>
+            <div class="input-group">
+                <input type="number" id="input-numero" placeholder="Escribe aquí tu número" min="0">
+                <button id="btn-agregar-numero">Agregar</button>
+            </div>
+            
+            <div class="numbers-info">
+                <h3>Números Agregados: <span id="contador-numeros">0</span>/20</h3>
+                <div id="lista-numeros" class="numbers-grid">
+                    </div>
+            </div>
+            
+            <p id="mensaje-error" class="message error hidden"></p>
+            <button id="btn-generar-txt" class="btn-primary hidden">Generar Archivo TXT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

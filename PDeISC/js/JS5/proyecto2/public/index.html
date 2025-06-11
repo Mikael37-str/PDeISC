@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analizador de Números TXT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="app-title">Analizador de Archivos TXT de Números</h1>
+
+        <div class="card upload-section">
+            <h2>Cargar y Analizar Archivo</h2>
+            <p>Sube un archivo **.txt** con números (uno por línea) para saber cuántos cumplen el criterio.</p>
+            <div class="input-file-group">
+                <label for="input-archivo" class="custom-file-upload">
+                    Seleccionar archivo .txt
+                </label>
+                <input type="file" id="input-archivo" accept=".txt">
+                <span id="file-name-display" class="file-name">Ningún archivo seleccionado</span>
+            </div>
+            <button id="btn-analizar-archivo" class="btn btn-primary">Analizar Archivo</button>
+            <p id="mensaje-analisis-error" class="message error hidden"></p>
+        </div>
+
+        <div id="resultados-analisis" class="card results-section hidden">
+            <h3>Resultados del Análisis</h3>
+            <div class="results-grid">
+                <p>Números totales procesados: <strong id="total-numeros-procesados">0</strong></p>
+                <p>Números útiles encontrados: <strong id="numeros-utiles-contador">0</strong> (<span id="porcentaje-utiles">0%</span>)</p>
+                <p>Números no útiles: <strong id="numeros-no-utiles-contador">0</strong> (<span id="porcentaje-no-utiles">0%</span>)</p>
+            </div>
+
+            <h4>Números que cumplen el criterio (ordenados):</h4>
+            <div id="lista-numeros-filtrados" class="filtered-numbers-list">
+                </div>
+            <button id="btn-descargar-filtrados" class="btn btn-secondary hidden">Descargar Números Filtrados</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
