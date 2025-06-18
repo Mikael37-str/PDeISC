@@ -1,0 +1,264 @@
+/* Estilos generales del cuerpo de la página */
+.cuerpo-pagina {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('https://www.esteveteijin.com/wp-content/uploads/2022/04/pexels-pixabay-163703.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-position: center center; /* Centra la imagen */
+}
+
+
+ 
+ 
+
+/* Contenedor principal de la aplicación */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos principales y subtítulos */
+.titulo-principal {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.subtitulo-seccion,
+.titulo-seccion-animales {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #eceff1;
+    padding-bottom: 8px;
+}
+
+/* Secciones generales */
+.seccion-configuracion,
+.formulario-animal,
+.seccion-filtros,
+.seccion-botones-acciones {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+/* Grupos de entrada (para campos y botones) */
+.grupo-entrada,
+.formulario-animal {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos salten de línea en pantallas pequeñas */
+    gap: 15px; /* Espacio entre los elementos */
+    align-items: flex-end; /* Alinea los elementos a la parte inferior de su contenedor */
+}
+
+/* Elementos individuales de entrada (inputs, selects) */
+.elemento-entrada {
+    flex: 1; /* Permite que los elementos se estiren para ocupar espacio */
+    min-width: 180px; /* Ancho mínimo para cada campo */
+}
+
+/* Estilo de los campos de texto y selección */
+.campo-texto,
+.campo-seleccion,
+.campo-texto-filtro,
+.campo-seleccion-filtro {
+    width: 100%; /* Ocupa todo el ancho de su contenedor */
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-texto:focus,
+.campo-seleccion:focus,
+.campo-texto-filtro:focus,
+.campo-seleccion-filtro:focus {
+    border-color: #88b0e8;
+    box-shadow: 0 0 0 3px rgba(70, 130, 180, 0.2); /* Sombra suave al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+/* Estilo para los botones */
+.elemento-boton {
+    display: flex; /* Para que el botón ocupe el espacio disponible si es parte de un flex container */
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    box-sizing: border-box;
+}
+
+.boton-accion-primaria { /* Para "Crear jaulas" */
+    background-color: #28a745; /* Verde Bootstrap */
+    color: white;
+}
+.boton-accion-primaria:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.boton-accion-secundaria { /* Para "Agregar tipo" */
+    background-color: #ffc107; /* Amarillo Bootstrap */
+    color: #333;
+}
+.boton-accion-secundaria:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.boton-accion-principal { /* Para "Agregar Animal" */
+    background-color: #007bff; /* Azul Bootstrap */
+    color: white;
+}
+.boton-accion-principal:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.boton-filtro { /* Para los botones de filtrar */
+    background-color: #6c757d; /* Gris de Bootstrap */
+    color: white;
+    width: 100%; /* Para que los botones de filtro ocupen todo el ancho en sus paneles */
+    margin-top: 10px;
+}
+.boton-filtro:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.boton-mostrar-todo { /* Para "Mostrar todo con document.write()" */
+    background-color: #20c997; /* Verde azulado */
+    color: white;
+    width: 100%;
+    display: block; /* Para que ocupe su propia línea */
+}
+.boton-mostrar-todo:hover {
+    background-color: #17a2b8;
+    transform: translateY(-2px);
+}
+
+/* Etiquetas de formularios */
+.etiqueta-filtro {
+    display: block; /* Ocupa su propia línea */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Paneles de filtro */
+.seccion-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los paneles de filtro */
+}
+
+.panel-filtro {
+    flex: 1; /* Permite que los paneles se estiren */
+    min-width: 280px; /* Ancho mínimo para que no se vean muy apretados */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+/* Tabla de resultados */
+.tabla-resultados {
+    overflow-x: auto; /* Permite el scroll horizontal en pantallas pequeñas */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre los bordes de las celdas */
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #e9ecef; /* Borde más suave para las celdas */
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:nth-child(even) { /* Estilo para filas pares */
+    background-color: #f8f9fa;
+}
+
+tr:hover { /* Efecto al pasar el ratón por encima de las filas */
+    background-color: #e2e6ea;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 2em;
+    }
+
+    .grupo-entrada,
+    .formulario-animal,
+    .seccion-filtros {
+        flex-direction: column; /* Apila los elementos en columnas */
+        gap: 10px;
+    }
+
+    .elemento-entrada,
+    .panel-filtro {
+        min-width: unset; /* Elimina el ancho mínimo para que ocupen el 100% */
+        width: 100%;
+    }
+
+    button {
+        width: 100%; /* Botones ocupan todo el ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .cuerpo-pagina {
+        padding: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 1.8em;
+    }
+}

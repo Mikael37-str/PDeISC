@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoológico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="cuerpo-pagina">
+<div class="contenedor-principal">
+  <h1 class="titulo-principal">Zoológico</h1>
+
+  <div class="seccion-configuracion">
+    <h4 class="subtitulo-seccion">Configuración inicial</h4>
+    <div class="grupo-entrada">
+      <div class="elemento-entrada">
+        <input type="number" class="campo-texto" placeholder="Cantidad de jaulas" id="campoCantidadJaulas">
+      </div>
+      <div class="elemento-boton">
+        <button class="boton-accion-primaria" onclick="crearJaulas()">Crear jaulas</button>
+      </div>
+    </div>
+    <div class="grupo-entrada">
+      <div class="elemento-entrada">
+        <input type="text" class="campo-texto" placeholder="Nuevo tipo de animal" id="campoNuevoTipoAnimal">
+      </div>
+      <div class="elemento-boton">
+        <button class="boton-accion-secundaria" onclick="agregarTipo()">Agregar tipo</button>
+      </div>
+    </div>
+  </div>
+
+  <form id="formularioAnimal" class="formulario-animal">
+    <div class="elemento-entrada">
+      <input type="text" class="campo-texto" placeholder="ID" id="campoIdAnimal" required>
+    </div>
+    <div class="elemento-entrada">
+      <input type="text" class="campo-texto" placeholder="Nombre" id="campoNombreAnimal" required>
+    </div>
+    <div class="elemento-entrada">
+      <select class="campo-seleccion" id="seleccionJaula" required>
+        <option value="">Seleccione jaula</option>
+      </select>
+    </div>
+    <div class="elemento-entrada">
+      <select class="campo-seleccion" id="seleccionTipoAnimal" required></select>
+    </div>
+    <div class="elemento-entrada">
+      <input type="number" class="campo-texto" placeholder="Peso (kg)" step="0.01" id="campoPesoAnimal" required>
+    </div>
+    <div class="elemento-boton">
+      <button type="submit" class="boton-accion-principal">Agregar Animal</button>
+    </div>
+  </form>
+
+  <div class="seccion-filtros">
+    <div class="panel-filtro">
+      <label class="etiqueta-filtro">Jaula y Peso (Menor a...)</label>
+      <input type="number" class="campo-texto-filtro" id="filtroJaula1" placeholder="N° Jaula">
+      <input type="number" class="campo-texto-filtro" id="filtroPesoMax1" placeholder="Peso máx">
+      <button class="boton-filtro" onclick="filtrarAnimalesPeso()">Filtrar</button>
+    </div>
+
+    <div class="panel-filtro">
+      <label class="etiqueta-filtro">Tipo y Rango de Jaulas</label>
+      <select class="campo-seleccion-filtro" id="filtroTipoAnimal"></select>
+      <input type="number" class="campo-texto-filtro" id="filtroJaulaDesde" placeholder="Desde Jaula">
+      <input type="number" class="campo-texto-filtro" id="filtroJaulaHasta" placeholder="Hasta Jaula">
+      <button class="boton-filtro" onclick="filtrarTipoYJaula()">Filtrar</button>
+    </div>
+
+    <div class="panel-filtro">
+      <label class="etiqueta-filtro">Animal de menor peso en Jaula</label>
+      <input type="number" class="campo-texto-filtro" id="filtroJaula2" placeholder="N° Jaula">
+      <input type="number" class="campo-texto-filtro" id="filtroPesoMax2" placeholder="Peso máximo">
+      <button class="boton-filtro" onclick="animalMenorPeso()">Buscar</button>
+    </div>
+  </div>
+
+  <div class="seccion-botones-acciones">
+    <button class="boton-mostrar-todo" onclick="mostrarConDocumentWrite()">Mostrar todo con document.write()</button>
+  </div>
+
+  <h2 class="titulo-seccion-animales">Animales Registrados</h2>
+  <div id="contenedorTablaAnimales" class="tabla-resultados"></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
