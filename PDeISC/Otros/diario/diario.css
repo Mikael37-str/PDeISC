@@ -1,0 +1,100 @@
+body {
+  overflow-x: hidden;
+  background-color: #2F4F4F;
+  max-height: 120vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-family: verdana; 
+  margin-bottom: -1vw;
+  font-size: 4.5vw;
+}
+
+header h4 {
+  color: white;
+  margin-bottom: -1vw;
+  font-size: 2.5vw;
+}
+
+nav {
+  background-color: black;
+  font-size: 2.4vw;
+}
+
+nav a {
+  text-decoration: none;
+  color: aliceblue; 
+  padding: 0.5vw 1vw;
+}
+
+#portal {
+  margin-top: -0.5rem; 
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
+}
+
+.noticia {
+  background-color: white;
+  justify-self: center;
+  width: 55vw;
+  margin: 0.7rem auto;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 1.5vw 0vw 1.5vw 0vw;
+  padding: 1vw;
+}
+
+.noticia img {
+  border-radius: 1.5vw 0vw 1.5vw 0vw;
+  width: 100%;
+  height: auto;
+  max-height: 25vw;
+  object-fit: cover;
+}
+
+#portal h2 {
+  color: white;
+  text-align: center;
+  font-size: 3.2vw;
+}
+
+.noticia h3 {
+  font-size: 3vw;
+  margin: 0.8vw 0;
+}
+
+.noticia h4 {
+  font-size: 2.2vw;
+  margin: 0.4vw 0;
+}
+
+.noticia h5 {
+  text-shadow: 0.2vw 0.2vw 0.2vw gray;
+  font-size: 2vw;
+}
+
+footer {
+  background-color: #070F43;
+  border-radius: 1.5vw 0vw 1.5vw 0vw;
+  padding: 1.2vw;
+}
+
+footer h2 {
+  color: white;
+  text-align: center;
+  font-size: 3vw;
+}
+
+footer h4 {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  margin: 0.3vw 0;
+}

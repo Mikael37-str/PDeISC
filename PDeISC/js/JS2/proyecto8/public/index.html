@@ -7,6 +7,27 @@
 <body>
   <h1>Operaciones con includes()</h1>
 
+  <div id="arrayInputSection">
+    <h2>Define tus Arrays</h2>
+    <div>
+      <label for="rolesInput">Roles (separados por comas):</label><br>
+      <input type="text" id="rolesInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="coloresInput">Colores (separados por comas):</label><br>
+      <input type="text" id="coloresInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="numerosInput">Números (separados por comas):</label><br>
+      <input type="text" id="numerosInput" size="60" value=""><br><br>
+    </div>
+    <button type="button" id="cargarArraysBtn">Cargar Arrays</button>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
   <form id="registroForm">
     <div>
       <button type="button" id="verificarAdminBtn">¿Contiene "admin"?</button>
@@ -26,7 +47,7 @@
   <br><br>
 
   <div>
-    <button type="button" id="mostrarArraysBtn">Mostrar arrays originales</button>
+    <button type="button" id="mostrarArraysBtn">Mostrar arrays actuales</button>
   </div>
 
   <h2>Resultados</h2>

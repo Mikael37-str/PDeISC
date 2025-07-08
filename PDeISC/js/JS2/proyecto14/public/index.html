@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Operaciones con reverse()</title>
@@ -5,6 +6,27 @@
 </head>
 <body>
   <h1>Operaciones con reverse()</h1>
+
+  <div id="dataInputSection">
+    <h2>Define tus Datos</h2>
+    <div>
+      <label for="letrasInput">Letras (separadas por comas):</label><br>
+      <input type="text" id="letrasInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="numerosInput">Números (separados por comas):</label><br>
+      <input type="text" id="numerosInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="textoInput">Texto:</label><br>
+      <input type="text" id="textoInput" size="60" value=""><br><br>
+    </div>
+    <button type="button" id="cargarDatosBtn">Cargar Datos</button>
+  </div>
+
+  <br>
+  <hr>
+  <br>
 
   <form id="operacionesForm">
     <div>
@@ -24,7 +46,7 @@
 
   <br><br>
   <div>
-    <button type="button" id="mostrarArraysBtn">Mostrar datos originales</button>
+    <button type="button" id="mostrarDatosBtn">Mostrar datos actuales</button>
   </div>
 
   <h2>Resultados</h2>

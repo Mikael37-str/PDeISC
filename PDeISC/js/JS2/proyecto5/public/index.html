@@ -7,18 +7,32 @@
 <body>
   <h1>Operaciones con splice()</h1>
 
-  <form id="registroForm">
+  <form id="arrayInputForm">
+    <label for="arrayInput">Introduce los elementos del array (separados por comas):</label><br>
+    <input type="text" id="arrayInput" size="50" value="A,B,C,D,E"><br><br>
+    <button type="button" id="cargarArrayBtn">Agregar al array</button>
+  </form>
+
+  <br>
+  <hr>
+  <br>
+
+  <form id="spliceOperationsForm">
     <div>
       <button type="button" id="eliminarDosBtn">Eliminar 2 desde posición 1</button>
     </div>
     <br><hr>
 
     <div>
-      <button type="button" id="insertarNombreBtn">Insertar nombre en posición 1</button>
+      <label for="insertarElementoInput">Elemento a insertar:</label>
+      <input type="text" id="insertarElementoInput" value="NuevoNombre">
+      <button type="button" id="insertarNombreBtn">Insertar elemento en posición 1</button>
     </div>
     <br><hr>
 
     <div>
+      <label for="reemplazarElementosInput">Elementos para reemplazar (separados por comas):</label>
+      <input type="text" id="reemplazarElementosInput" value="X,Y">
       <button type="button" id="reemplazarDosBtn">Reemplazar 2 desde posición 2</button>
     </div>
   </form>
@@ -26,7 +40,7 @@
   <br><br>
 
   <div>
-    <button type="button" id="mostrarLetrasBtn">Mostrar letras</button>
+    <button type="button" id="mostrarLetrasBtn">Mostrar array actual</button>
   </div>
 
   <h2>Resultados</h2>

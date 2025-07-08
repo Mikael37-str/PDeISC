@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Operaciones con sort()</title>
@@ -5,6 +6,27 @@
 </head>
 <body>
   <h1>Operaciones con sort()</h1>
+
+  <div id="arrayInputSection">
+    <h2>Define tus Arrays</h2>
+    <div>
+      <label for="numerosInput">Números (separados por comas):</label><br>
+      <input type="text" id="numerosInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="palabrasInput">Palabras (separadas por comas):</label><br>
+      <input type="text" id="palabrasInput" size="60" value=""><br><br>
+    </div>
+    <div>
+      <label for="personasInput">Personas (ej: Nombre,Edad;Nombre2,Edad2 - separados por punto y coma):</label><br>
+      <input type="text" id="personasInput" size="60" value=""><br><br>
+    </div>
+    <button type="button" id="cargarArraysBtn">Cargar Arrays</button>
+  </div>
+
+  <br>
+  <hr>
+  <br>
 
   <form id="operacionesForm">
     <div>
@@ -24,7 +46,7 @@
 
   <br><br>
   <div>
-    <button type="button" id="mostrarArraysBtn">Mostrar arrays originales</button>
+    <button type="button" id="mostrarArraysBtn">Mostrar arrays actuales</button>
   </div>
 
   <h2>Resultados</h2>
