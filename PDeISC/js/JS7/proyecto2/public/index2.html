@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api</title>
+    <link rel="stylesheet" href="estilo2.css">
+
+</head>
+<body>
+  <div class="contenedor-formulario">
+    <h1>Nuevo Usuario:</h1>
+    <input type="text" id="nombreUsuario" placeholder="Tu Nombre Completo" required />
+    <input type="email" id="emailUsuario" placeholder="tu.correo@ejemplo.com" required />
+    <button id="btnEnviarConFetch">Enviar con Fetch</button>
+    <button id="btnEnviarConAxios">Enviar con Axios</button>
+
+    <div id="areaMensajes">
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>

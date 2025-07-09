@@ -1,0 +1,72 @@
+body {
+  font-family: 'Segoe UI', sans-serif; 
+  background-color: #f7e6f9; 
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+.contenedor-alumnos-base {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #e0c8e8; 
+}
+
+h1 {
+  color: #8a2be2; 
+  margin-bottom: 25px;
+  font-size: 2.1em;
+  text-transform: uppercase;  
+  letter-spacing: 1px;
+}
+
+.lista-alumnos-base {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+}
+
+.alumno-item-base {
+  background-color: #fcf6ff; 
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 6px solid #ff69b4; 
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #555;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.alumno-item-base:hover {
+  background-color: #f5e0f9;
+  transform: translateY(-2px); 
+}
+
+.alumno-item-base strong {
+  color: #8a2be2; 
+  font-size: 1.1em;
+}
+
+.mensaje-error-base {
+  padding: 15px;
+  color: #dc3545;
+  background-color: #fff0f0;
+  border: 1px dashed #dc3545;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
