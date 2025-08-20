@@ -1,0 +1,39 @@
+ body{
+      background-color: #b9b1b1;
+    }
+    nav{
+        font-size: 1.7vw;
+    }
+  
+  h1 {
+  text-align: center;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 6vw;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+  letter-spacing: 2px; 
+  background: linear-gradient(to right, #a5706c, #af9d66);
+  
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
+
+  img
+  {
+    width: 20%;
+    height: 55%;
+  }
+
+  .carousel {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
